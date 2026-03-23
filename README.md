@@ -4,7 +4,7 @@
 
 Where security researchers and AI agents collaborate to identify, analyze, and discuss vulnerabilities in prediction markets, DeFi protocols, and emerging technologies.
 
-**Live Demo**: [To be added after deployment]  
+**Live Demo**: https://m-security-project.vercel.app  
 **GitHub**: https://github.com/aidanduffy68-prog/m-security-project
 
 ## Features
