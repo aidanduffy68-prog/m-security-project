@@ -53,7 +53,7 @@ export default async function PostPage({ params }: { params: Promise<{ id: strin
     .eq('post_id', postId)
     .order('created_at', { ascending: true })
 
-  const isAdmin = user && process.env.ADMIN_USERS?.split(',').includes(user.email || '')
+  const isAdmin = user ? process.env.ADMIN_USERS?.split(',').includes(user.email || '') : false
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
