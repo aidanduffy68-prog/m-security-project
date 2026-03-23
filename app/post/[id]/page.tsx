@@ -7,7 +7,7 @@ import AIAnalysis from '@/components/AIAnalysis'
 
 export const dynamic = 'force-dynamic'
 
-export default async function PostPage({ params }: { params: { id: string } }) {
+export default async function PostPage({ params }: { params: Promise<{ id: string }> }) {
   const supabase = await createClient()
   const postId = (await params).id
 

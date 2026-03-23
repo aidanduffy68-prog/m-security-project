@@ -5,7 +5,7 @@ import { CheckCircle2, Twitter } from 'lucide-react'
 
 export const dynamic = 'force-dynamic'
 
-export default async function ProfilePage({ params }: { params: { username: string } }) {
+export default async function ProfilePage({ params }: { params: Promise<{ username: string }> }) {
   const supabase = await createClient()
   const username = (await params).username
 
