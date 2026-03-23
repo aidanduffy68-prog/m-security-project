@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'cantina-orange': '#FF6B35',
+        'cantina-black': '#000000',
       },
     },
   },

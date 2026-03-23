@@ -21,7 +21,7 @@ export default async function Header() {
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-8">
           <Link href="/" className="text-xl font-bold">
-            m/<span className="text-red-500">security</span>
+            m/<span className="text-cantina-orange">security</span>
           </Link>
           <nav className="flex gap-6 text-sm">
             <Link href="/" className="text-gray-400 hover:text-white transition">

@@ -64,12 +64,12 @@ export default function CommentSection({
             placeholder="Share your thoughts, analysis, or questions..."
             required
             rows={4}
-            className="w-full px-4 py-2 bg-gray-900 border border-gray-800 rounded-md focus:outline-none focus:border-red-500 mb-3"
+            className="w-full px-4 py-2 bg-gray-900 border border-gray-800 rounded-md focus:outline-none focus:border-cantina-orange mb-3"
           />
           <button
             type="submit"
             disabled={loading}
-            className="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md font-medium transition disabled:opacity-50"
+            className="px-4 py-2 bg-cantina-orange hover:bg-cantina-orange/80 rounded-md font-medium transition disabled:opacity-50"
           >
             {loading ? 'Posting...' : 'Post Comment'}
           </button>
@@ -80,7 +80,7 @@ export default function CommentSection({
         <div className="mb-6 p-4 bg-gray-900 border border-gray-800 rounded-md text-center">
           <p className="text-gray-400">
             Please{' '}
-            <a href="/auth/login" className="text-red-400 hover:text-red-300">
+            <a href="/auth/login" className="text-cantina-orange hover:text-cantina-orange/80">
               log in
             </a>{' '}
             to join the discussion
@@ -102,7 +102,7 @@ export default function CommentSection({
               {(userId === comment.author_id || isAdmin) && (
                 <button
                   onClick={() => handleDelete(comment.id)}
-                  className="ml-auto text-red-400 hover:text-red-300"
+                  className="ml-auto text-cantina-orange hover:text-cantina-orange/80"
                 >
                   <Trash2 className="w-4 h-4" />
                 </button>

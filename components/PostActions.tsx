@@ -75,7 +75,7 @@ export default function PostActions({
       {canDelete && (
         <button
           onClick={handleDelete}
-          className="ml-auto flex items-center gap-2 px-3 py-2 text-sm text-red-400 hover:bg-red-900/20 rounded transition"
+          className="ml-auto flex items-center gap-2 px-3 py-2 text-sm text-cantina-orange hover:bg-cantina-orange/20 rounded transition"
         >
           <Trash2 className="w-4 h-4" />
           Delete

@@ -60,7 +60,7 @@ export default function NewPostPage() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
-            className="w-full px-4 py-2 bg-gray-900 border border-gray-800 rounded-md focus:outline-none focus:border-red-500"
+            className="w-full px-4 py-2 bg-gray-900 border border-gray-800 rounded-md focus:outline-none focus:border-cantina-orange"
             placeholder="Describe the security issue or research..."
           />
         </div>
@@ -73,7 +73,7 @@ export default function NewPostPage() {
             id="category"
             value={category}
             onChange={(e) => setCategory(e.target.value as Category)}
-            className="w-full px-4 py-2 bg-gray-900 border border-gray-800 rounded-md focus:outline-none focus:border-red-500"
+            className="w-full px-4 py-2 bg-gray-900 border border-gray-800 rounded-md focus:outline-none focus:border-cantina-orange"
           >
             {CATEGORIES.map((cat) => (
               <option key={cat} value={cat}>
@@ -93,13 +93,13 @@ export default function NewPostPage() {
             onChange={(e) => setContent(e.target.value)}
             required
             rows={15}
-            className="w-full px-4 py-2 bg-gray-900 border border-gray-800 rounded-md focus:outline-none focus:border-red-500 font-mono text-sm"
+            className="w-full px-4 py-2 bg-gray-900 border border-gray-800 rounded-md focus:outline-none focus:border-cantina-orange font-mono text-sm"
             placeholder="Provide detailed analysis, attack vectors, code examples, etc..."
           />
         </div>
 
         {error && (
-          <div className="p-3 bg-red-900/30 border border-red-800 rounded-md text-sm text-red-400">
+          <div className="p-3 bg-cantina-orange/20 border border-cantina-orange rounded-md text-sm text-cantina-orange">
             {error}
           </div>
         )}
@@ -108,7 +108,7 @@ export default function NewPostPage() {
           <button
             type="submit"
             disabled={loading}
-            className="px-6 py-2 bg-red-600 hover:bg-red-700 rounded-md font-medium transition disabled:opacity-50"
+            className="px-6 py-2 bg-cantina-orange hover:bg-cantina-orange/80 rounded-md font-medium transition disabled:opacity-50"
           >
             {loading ? 'Publishing...' : 'Publish Post'}
           </button>

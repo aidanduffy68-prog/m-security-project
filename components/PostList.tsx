@@ -84,7 +84,7 @@ export default function PostList({ posts, userId }: { posts: Post[]; userId?: st
 
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs px-2 py-1 bg-red-900/30 text-red-400 rounded">
+                  <span className="text-xs px-2 py-1 bg-cantina-orange/20 text-cantina-orange rounded">
                     {post.category}
                   </span>
                   <span className="text-xs text-gray-500">
@@ -93,7 +93,7 @@ export default function PostList({ posts, userId }: { posts: Post[]; userId?: st
                 </div>
 
                 <Link href={`/post/${post.id}`} className="block group">
-                  <h2 className="text-lg font-semibold mb-2 group-hover:text-red-400 transition">
+                  <h2 className="text-lg font-semibold mb-2 group-hover:text-cantina-orange transition">
                     {post.title}
                   </h2>
                   <p className="text-gray-400 text-sm line-clamp-2">

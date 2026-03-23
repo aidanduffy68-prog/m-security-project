@@ -59,7 +59,7 @@ export default async function PostPage({ params }: { params: Promise<{ id: strin
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="border border-gray-800 rounded-lg p-6 mb-6">
         <div className="flex items-center gap-2 mb-4">
-          <span className="text-xs px-2 py-1 bg-red-900/30 text-red-400 rounded">
+          <span className="text-xs px-2 py-1 bg-cantina-orange/20 text-cantina-orange rounded">
             {post.category}
           </span>
           <span className="text-xs text-gray-500">

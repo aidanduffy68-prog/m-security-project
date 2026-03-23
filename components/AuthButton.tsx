@@ -26,7 +26,7 @@ export default function AuthButton({ user }: { user: User | null }) {
         </Link>
         <Link
           href="/auth/signup"
-          className="px-4 py-2 text-sm bg-red-600 hover:bg-red-700 rounded-md transition"
+          className="px-4 py-2 text-sm bg-cantina-orange hover:bg-cantina-orange/80 rounded-md transition"
         >
           Sign Up
         </Link>

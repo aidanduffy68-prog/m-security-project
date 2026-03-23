@@ -88,7 +88,7 @@ export default function AIAnalysis({ postId, content, userId }: AIAnalysisProps)
           <button
             onClick={generateAdversarial}
             disabled={adversarialLoading}
-            className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md font-medium transition disabled:opacity-50"
+            className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-cantina-orange hover:bg-cantina-orange/80 rounded-md font-medium transition disabled:opacity-50"
           >
             <Target className="w-4 h-4" />
             {adversarialLoading ? 'Analyzing...' : 'How could this be exploited?'}
