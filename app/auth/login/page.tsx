@@ -35,7 +35,7 @@ export default function LoginPage() {
   return (
     <div className="max-w-md mx-auto px-4 py-16">
       <div className="border border-gray-800 rounded-lg p-8">
-        <h1 className="text-2xl font-bold mb-6">Log In to m/security</h1>
+        <h1 className="text-2xl font-bold mb-6">Log in to c/security</h1>
 
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
