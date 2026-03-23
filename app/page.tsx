@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic'
 export default async function Home({
   searchParams,
 }: {
-  searchParams: { sort?: string }
+  searchParams: Promise<{ sort?: string }>
 }) {
   const supabase = await createClient()
   const sortBy = (await searchParams).sort || 'recent'
