@@ -27,6 +27,9 @@ export default async function Header() {
             <Link href="/" className="text-gray-400 hover:text-white transition">
               Feed
             </Link>
+            <Link href="/socials" className="text-gray-400 hover:text-white transition">
+              Socials
+            </Link>
             {user && (
               <Link href="/post/new" className="text-gray-400 hover:text-white transition">
                 New Post
