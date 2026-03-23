@@ -1,0 +1,7 @@
+node_modules/
+.next/
+.env.local
+pnpm-lock.yaml
+CHECKLIST-STATUS.md
+POST-DEPLOYMENT-TASKS.md
+DEPLOY-NOW.md
