@@ -17,11 +17,13 @@ export default async function Header() {
   }
 
   return (
-    <header className="border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50">
+    <header className="border-b border-gray-800 glass-effect sticky top-0 z-50 shadow-lg">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-8">
-          <Link href="/" className="text-xl font-bold">
-            c/<span className="text-cantina-orange">security</span>
+          <Link href="/" className="text-xl font-bold flex items-center gap-2">
+            <span className="px-3 py-1 rounded-full bg-gradient-to-r from-cantina-orange to-orange-600 text-white shadow-lg">c</span>
+            <span className="text-gray-300">/</span>
+            <span className="text-cantina-orange">security</span>
           </Link>
           <nav className="flex gap-6 text-sm">
             <Link href="/" className="text-gray-400 hover:text-white transition">

@@ -60,7 +60,7 @@ export default function PostList({ posts, userId }: { posts: Post[]; userId?: st
 
       <div className="space-y-4">
         {posts.map((post) => (
-          <div key={post.id} className="border border-gray-800 rounded-lg p-4 hover:border-gray-700 transition">
+          <div key={post.id} className="border border-gray-800 rounded-2xl p-6 hover:border-cantina-orange transition glass-effect shadow-lg hover:shadow-xl">
             <div className="flex gap-4">
               <div className="flex flex-col items-center gap-1">
                 <button
@@ -84,7 +84,7 @@ export default function PostList({ posts, userId }: { posts: Post[]; userId?: st
 
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs px-2 py-1 bg-cantina-orange/20 text-cantina-orange rounded">
+                  <span className="text-xs px-3 py-1 bg-gradient-to-r from-cantina-orange/30 to-cantina-orange/20 text-cantina-orange rounded-full border border-cantina-orange/30 shadow-sm">
                     {post.category}
                   </span>
                   <span className="text-xs text-gray-500">
