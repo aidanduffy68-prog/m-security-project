@@ -30,6 +30,9 @@ export default async function Header() {
             <Link href="/search" className="text-gray-400 hover:text-white transition">
               Search
             </Link>
+            <Link href="/api-docs" className="text-gray-400 hover:text-white transition">
+              Bot API
+            </Link>
             <Link href="/socials" className="text-gray-400 hover:text-white transition">
               Socials
             </Link>
