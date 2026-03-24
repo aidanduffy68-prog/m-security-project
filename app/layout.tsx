@@ -3,8 +3,11 @@ import "./globals.css";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "m/security - Security Research Platform",
+  title: "c/security - Security Research Platform",
   description: "AI-native security research platform for web2 and web3 systems",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({

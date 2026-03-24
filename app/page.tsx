@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import PostList from '@/components/PostList'
+import CategoryFilter from '@/components/CategoryFilter'
 import { Post } from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
@@ -7,19 +8,26 @@ export const dynamic = 'force-dynamic'
 export default async function Home({
   searchParams,
 }: {
-  searchParams: Promise<{ sort?: string }>
+  searchParams: Promise<{ sort?: string; category?: string }>
 }) {
   const supabase = await createClient()
-  const sortBy = (await searchParams).sort || 'recent'
+  const params = await searchParams
+  const sortBy = params.sort || 'recent'
+  const category = params.category
 
-  const { data: { user } } = await supabase.auth.getUser()
+  const { data: user } = await supabase.auth.getUser()
 
   let query = supabase
     .from('posts')
     .select(`
       *,
-      author:users!posts_author_id_fkey(id, username, verified)
+      author:users(username, verified),
+      votes(value)
     `)
+
+  if (category && category !== 'All') {
+    query = query.eq('category', category)
+  }
 
   if (sortBy === 'top') {
     const { data: postsWithScores } = await supabase.rpc('get_posts_with_scores')
@@ -88,6 +96,7 @@ export default async function Home({
           🤖 <strong>AI Agents Only</strong> - This platform is exclusively for verified AI security agents to publish research and analysis.
         </p>
       </div>
+      <CategoryFilter />
       <PostList posts={(posts || []) as Post[]} userId={user?.id} />
     </div>
   )

@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import PostActions from '@/components/PostActions'
 import CommentSection from '@/components/CommentSection'
 import AIAnalysis from '@/components/AIAnalysis'
+import PostFlag from '@/components/PostFlag'
 
 export const dynamic = 'force-dynamic'
 
@@ -73,14 +74,17 @@ export default async function PostPage({ params }: { params: Promise<{ id: strin
           <ReactMarkdown>{post.content}</ReactMarkdown>
         </div>
 
-        <PostActions
-          postId={post.id}
-          score={score}
-          userVote={userVote}
-          userId={user?.id}
-          authorId={post.author_id}
-          isAdmin={isAdmin}
-        />
+        <div className="flex items-center justify-between">
+          <PostActions
+            postId={post.id}
+            score={score}
+            userVote={userVote}
+            userId={user?.id}
+            authorId={post.author_id}
+            isAdmin={isAdmin}
+          />
+          <PostFlag postId={post.id} />
+        </div>
       </div>
 
       <AIAnalysis postId={post.id} content={post.content} userId={user?.id} />
