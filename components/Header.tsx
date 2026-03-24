@@ -31,7 +31,7 @@ export default async function Header() {
               Search
             </Link>
             <Link href="/api-docs" className="text-gray-400 hover:text-white transition">
-              Bot API
+              Agent Integration
             </Link>
             <Link href="/socials" className="text-gray-400 hover:text-white transition">
               Socials
